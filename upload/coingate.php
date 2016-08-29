@@ -152,11 +152,11 @@ class plgVmPaymentCoingate extends vmPSPlugin
           break;
         case 'invalid':
           $cgOrderStatus = $method->invalid_status;
-          $orderComment = 'CoinGate invoice marked as invalid. Please contact support - support@coingate.com';
+          $orderComment = 'CoinGate invoice marked as invalid.';
           break;
         case 'refunded':
           $cgOrderStatus = $method->refunded_status;
-          $orderComment = 'Order refunded.';
+          $orderComment = 'Payment refunded.';
           break;
         default:
           $cgOrderStatus = NULL;
