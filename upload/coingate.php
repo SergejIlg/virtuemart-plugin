@@ -132,7 +132,7 @@ class plgVmPaymentCoingate extends vmPSPlugin
         'api_key' => $method->api_key,
         'api_secret' => $method->api_secret,
         'environment' => $method->environment,
-        'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' + COINGATE_VIRTUEMART_EXTENSION_VERSION
+        'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' . COINGATE_VIRTUEMART_EXTENSION_VERSION
       );
 
       $cgOrder = \CoinGate\Merchant\Order::findOrFail($callbackData['id'], array(), $authentication);
@@ -269,7 +269,7 @@ class plgVmPaymentCoingate extends vmPSPlugin
       'api_key' => $method->api_key,
       'api_secret' => $method->api_secret,
       'environment' => $method->environment,
-      'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' + COINGATE_VIRTUEMART_EXTENSION_VERSION
+      'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' . COINGATE_VIRTUEMART_EXTENSION_VERSION
     );
 
     $cgOrder = \CoinGate\Merchant\Order::createOrFail(array(
