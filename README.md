@@ -9,7 +9,7 @@ You can sign up for CoinGate account at https://coingate.com for production and 
 
 ### via Extension Manager
 
-1. Download [coingate-virtuemart.zip](https://github.com/coingate/virtuemart-plugin/releases/download/1.0.0/coingate-virtuemart.zip)
+1. Download [coingate-virtuemart-1.0.0.zip](https://github.com/coingate/virtuemart-plugin/releases/download/v1.0.0/coingate-virtuemart-1.0.0.zip)
 
 2. In admin panel, go to *Extensions » Extension Manager » Install* in *Upload Package File* block choose **coingate-virtuemart.zip** from your computer, then click **Upload & Install**.
 
