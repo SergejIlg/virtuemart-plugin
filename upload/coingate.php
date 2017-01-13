@@ -253,6 +253,9 @@ class plgVmPaymentCoingate extends vmPSPlugin
     if (!class_exists('VirtueMartModelCurrency'))
       require(JPATH_VM_ADMINISTRATOR . DS . 'models' . DS . 'currency.php');
 
+    VmConfig::loadJLang('com_virtuemart', true);
+    VmConfig::loadJLang('com_virtuemart_orders', true);
+    
     $orderID = $order['details']['BT']->virtuemart_order_id;
     $paymentMethodID = $order['details']['BT']->virtuemart_paymentmethod_id;
 
