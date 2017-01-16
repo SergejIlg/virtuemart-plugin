@@ -171,8 +171,6 @@ class plgVmPaymentCoingate extends vmPSPlugin
         $order['comments']            = $cgOrderStatus;
 
         $modelOrder->updateStatusForOneOrder($virtuemartOrderId, $order, true);
-
-        exit('OK');
       }
     } catch (Exception $e) {
       exit(get_class($e) . ': ' . $e->getMessage());
