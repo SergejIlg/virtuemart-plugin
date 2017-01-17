@@ -257,8 +257,7 @@ class plgVmPaymentCoingate extends vmPSPlugin
     $orderID = $order['details']['BT']->virtuemart_order_id;
     $paymentMethodID = $order['details']['BT']->virtuemart_paymentmethod_id;
 
-    $currencyModel = new VirtueMartModelCurrency();
-    $currency      = $currencyModel->getCurrency($order['details']['BT']->user_currency_id);
+    $currency_code_3 = shopFunctions::getCurrencyByID($method->payment_currency, 'currency_code_3');
 
     $description = array();
     foreach ($order['items'] as $item) {
@@ -276,7 +275,7 @@ class plgVmPaymentCoingate extends vmPSPlugin
     $cgOrder = \CoinGate\Merchant\Order::createOrFail(array(
       'order_id'         => $orderID,
       'price'            => number_format($order['details']['BT']->order_total, 2, '.', ''),
-      'currency'         => $currency->currency_code_3,
+      'currency'         => $currency_code_3,
       'receive_currency' => $method->receive_currency,
       'cancel_url'       => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=cart')),
       'callback_url'     => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=pluginresponse&task=pluginnotification&tmpl=component')),
