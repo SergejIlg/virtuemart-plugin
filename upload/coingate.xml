@@ -7,7 +7,7 @@
   <authorUrl>https://www.coingate.com</authorUrl>
   <copyright>Copyright (C) 2016</copyright>
   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-	<version status="MINOR">1.0.0</version>
+	<version status="MINOR">1.0.1.rc2</version>
   <description>CoinGate payment plugin</description>
 
   <files>

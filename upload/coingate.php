@@ -1,7 +1,7 @@
 <?php
 
 defined('_JEXEC') or die('Restricted access');
-define('COINGATE_VIRTUEMART_EXTENSION_VERSION', '1.0.0');
+define('COINGATE_VIRTUEMART_EXTENSION_VERSION', '1.0.1.rc2');
 
 require_once('lib/CoinGate/init.php');
 
@@ -253,7 +253,7 @@ class plgVmPaymentCoingate extends vmPSPlugin
 
     VmConfig::loadJLang('com_virtuemart', true);
     VmConfig::loadJLang('com_virtuemart_orders', true);
-    
+
     $orderID = $order['details']['BT']->virtuemart_order_id;
     $paymentMethodID = $order['details']['BT']->virtuemart_paymentmethod_id;
 
