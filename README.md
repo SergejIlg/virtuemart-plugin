@@ -7,11 +7,11 @@ CoinGate bitcoin payment gateway VirtueMart plugin.
 
 Sign up for CoinGate account at <https://coingate.com> for production and <https://sandbox.coingate.com> for testing (sandbox) environment.
 
-Please note, that for "Test" mode you **must** generate separate API credentials on <https://sandbox.coingate.com>. API credentials generated on <https://coingame.com> will **not** work for "Test" mode.
+Please note, that for "Test" mode you **must** generate separate API credentials on <https://sandbox.coingate.com>. API credentials generated on <https://coingate.com> will **not** work for "Test" mode.
 
 ### via Extension Manager
 
-1. Download [coingate-virtuemart-1.0.0.zip](https://github.com/coingate/virtuemart-plugin/releases/download/v1.0.0/coingate-virtuemart-1.0.0.zip)
+1. Download [coingate-virtuemart-1.0.1.zip](https://github.com/coingate/virtuemart-plugin/releases/download/v1.0.1/coingate-virtuemart-1.0.1.zip)
 
 2. Login to your VirtueMart store admin panel, go to *Extensions » Extension Manager » Install*. In the *Upload Package File* part, choose **coingate-virtuemart.zip** you previously downloaded, then click **Upload & Install**.
 
