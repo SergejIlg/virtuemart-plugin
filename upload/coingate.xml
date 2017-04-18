@@ -38,9 +38,9 @@
     <param type="spacer" level="level1" />
     <param name="receive_currency" type="list" default="live" label="VMPAYMENT_COINGATE_RECEIVE_CURRENCY_LABEL"
       description="VMPAYMENT_COINGATE_RECEIVE_CURRENCY_DESCRIPTION">
+      <option value="btc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_BTC_LABEL</option>
       <option value="eur">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_EUR_LABEL</option>
       <option value="usd">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USD_LABEL</option>
-      <option value="btc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_BTC_LABEL</option>
     </param>
   </params>
 
