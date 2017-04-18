@@ -7,7 +7,7 @@
   <authorUrl>https://www.coingate.com</authorUrl>
   <copyright>Copyright (C) 2016</copyright>
   <license>https://github.com/coingate/virtuemart-plugin/blob/master/LICENSE MIT</license>
-	<version status="MINOR">1.0.1</version>
+	<version status="MINOR">1.0.2</version>
   <description>CoinGate payment plugin</description>
 
   <files>
