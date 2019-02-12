@@ -121,19 +121,20 @@ class plgVmPaymentCoingate extends vmPSPlugin
 
       if (!$order)
         throw new Exception('Order #' . $callbackData['order_id'] . ' does not exists');
-
       $method = $this->getVmPluginMethod($order['details']['BT']->virtuemart_paymentmethod_id);
 
       if (!$this->selectedThisElement($method->payment_element))
         return false;
 
-      $authentication = array(
-        'app_id' => $method->app_id,
-        'api_key' => $method->api_key,
-        'api_secret' => $method->api_secret,
-        'environment' => $method->environment,
+     $plugin = JPluginHelper::getPlugin('vmpayment', 'coingate');
+     $pluginParams = new JRegistry();
+     $pluginParams->loadString($plugin->params);     
+
+     $authentication = [
+        'auth_token' => $pluginParams->get('auth_token', 'defaultValue'),
+        'environment' => $pluginParams->get('environment', 'defaultValue'),
         'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' . COINGATE_VIRTUEMART_EXTENSION_VERSION
-      );
+     ];
 
       $cgOrder = \CoinGate\Merchant\Order::findOrFail($callbackData['id'], array(), $authentication);
 
@@ -171,6 +172,7 @@ class plgVmPaymentCoingate extends vmPSPlugin
         $order['comments']            = $cgOrderStatus;
 
         $modelOrder->updateStatusForOneOrder($virtuemartOrderId, $order, true);
+
       }
     } catch (Exception $e) {
       exit(get_class($e) . ': ' . $e->getMessage());
@@ -267,19 +269,21 @@ class plgVmPaymentCoingate extends vmPSPlugin
       $description[] = $item->product_quantity . ' × ' . $item->order_item_name;
     }
 
-    $authentication = array(
-      'app_id' => $method->app_id,
-      'api_key' => $method->api_key,
-      'api_secret' => $method->api_secret,
-      'environment' => $method->environment,
+     $plugin = JPluginHelper::getPlugin('vmpayment', 'coingate');
+    $pluginParams = new JRegistry();
+    $pluginParams->loadString($plugin->params);
+
+    $authentication = [
+      'auth_token' => $pluginParams->get('auth_token','defaultValue'),
+      'environment' => $pluginParams->get('environment', 'defaultValue'),
       'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' . COINGATE_VIRTUEMART_EXTENSION_VERSION
-    );
+    ];
 
     $cgOrder = \CoinGate\Merchant\Order::createOrFail(array(
       'order_id'         => $orderID,
-      'price'            => $totalInCurrency,
-      'currency'         => $currency_code_3,
-      'receive_currency' => $method->receive_currency,
+      'price_amount'     => $totalInCurrency,
+      'price_currency'   => $currency_code_3,
+      'receive_currency' => $pluginParams->get('receive_currency','defaultValue'),
       'cancel_url'       => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=cart')),
       'callback_url'     => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=pluginresponse&task=pluginnotification&tmpl=component')),
       'success_url'      => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=pluginresponse&task=pluginresponsereceived&pm=' . $paymentMethodID)),

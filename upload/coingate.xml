@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <extension version="2.6" type="plugin" group="vmpayment" method="upgrade">
-  <name>VM Payment - CoinGate</name>
+  <name>VM Payment - Cryptocurrency Payments via CoinGate</name>
   <creationDate>August 10th 2016</creationDate>
   <author>CoinGate</author>
   <authorUrl>https://www.coingate.com</authorUrl>
@@ -18,9 +18,7 @@
 
   <params addpath="/administrator/components/com_virtuemart/elements">
     <param type="spacer" default="VMPAYMENT_COINGATE_CREDENTIALS_LABEL" level="level1" />
-    <param name="app_id" type="text" label="VMPAYMENT_COINGATE_APP_ID_LABEL" description="VMPAYMENT_COINGATE_APP_ID_DESCRIPTION" />
-    <param name="api_key" type="text" label="VMPAYMENT_COINGATE_API_KEY_LABEL" description="VMPAYMENT_COINGATE_API_KEY_DESCRIPTION" />
-    <param name="api_secret" type="text" label="VMPAYMENT_COINGATE_API_SECRET_LABEL" description="VMPAYMENT_COINGATE_API_SECRET_DESCRIPTION" />
+    <param name="auth_token" type="text" label="VMPAYMENT_COINGATE_API_AUTH_TOKEN_LABEL" description="VMPAYMENT_COINGATE_API_AUTH_TOKEN_DESCRIPTION" />
     <param name="environment" type="list" default="live" label="VMPAYMENT_COINGATE_ENVIRONMENT_LABEL"
       description="VMPAYMENT_COINGATE_ENVIRONMENT_DESCRIPTION">
       <option value="live">VMPAYMENT_COINGATE_LIVE_ENVIRONMENT_LABEL</option>
@@ -48,9 +46,7 @@
     <fields name="params">
       <fieldset name="basic">
         <field type="spacer" default="VMPAYMENT_COINGATE_CREDENTIALS_LABEL" level="level1" />
-        <field name="app_id" type="text" label="VMPAYMENT_COINGATE_APP_ID_LABEL" description="VMPAYMENT_COINGATE_APP_ID_DESCRIPTION"/>
-        <field name="api_key" type="text" label="VMPAYMENT_COINGATE_API_KEY_LABEL" description="VMPAYMENT_COINGATE_API_KEY_DESCRIPTION"/>
-        <field name="api_secret" type="text" label="VMPAYMENT_COINGATE_API_SECRET_LABEL" description="VMPAYMENT_COINGATE_API_SECRET_DESCRIPTION"/>
+        <field name="auth_token" type="text" label="VMPAYMENT_COINGATE_API_AUTH_TOKEN_LABEL" description="VMPAYMENT_COINGATE_API_AUTH_TOKEN_DESCRIPTION"/>
         <field name="environment" type="list" default="live" label="VMPAYMENT_COINGATE_ENVIRONMENT_LABEL"
           description="VMPAYMENT_COINGATE_ENVIRONMENT_DESCRIPTION">
           <option value="live">VMPAYMENT_COINGATE_LIVE_ENVIRONMENT_LABEL</option>
