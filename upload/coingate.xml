@@ -37,8 +37,11 @@
     <param name="receive_currency" type="list" default="live" label="VMPAYMENT_COINGATE_RECEIVE_CURRENCY_LABEL"
       description="VMPAYMENT_COINGATE_RECEIVE_CURRENCY_DESCRIPTION">
       <option value="btc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_BTC_LABEL</option>
+      <option value="ltc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_LTC_LABEL</option>
+      <option value="eth">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_ETH_LABEL</option>
       <option value="eur">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_EUR_LABEL</option>
       <option value="usd">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USD_LABEL</option>
+      <option value="DO_NOT_CONVERT">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_DONOTCONVERT_LABEL</option>
     </param>
   </params>
 
@@ -64,9 +67,12 @@
         <field type="spacer" level="level1" />
         <field name="receive_currency" type="list" default="live" label="VMPAYMENT_COINGATE_RECEIVE_CURRENCY_LABEL"
           description="VMPAYMENT_COINGATE_RECEIVE_CURRENCY_DESCRIPTION">
-          <option value="eur">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_EUR_LABEL</option>
-          <option value="usd">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USD_LABEL</option>
-          <option value="btc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_BTC_LABEL</option>
+            <option value="btc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_BTC_LABEL</option>
+            <option value="ltc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_LTC_LABEL</option>
+            <option value="eth">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_ETH_LABEL</option>
+            <option value="eur">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_EUR_LABEL</option>
+            <option value="usd">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USD_LABEL</option>
+            <option value="DO_NOT_CONVERT">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_DONOTCONVERT_LABEL</option>
         </field>
         <field name="payment_logos" type="vmfiles" multiple="true" label="VMPAYMENT_COINGATE_LOGO_LABEL"
           description="VMPAYMENT_COINGATE_LOGO_DESCRIPTION"
