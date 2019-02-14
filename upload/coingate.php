@@ -126,13 +126,10 @@ class plgVmPaymentCoingate extends vmPSPlugin
       if (!$this->selectedThisElement($method->payment_element))
         return false;
 
-     $plugin = JPluginHelper::getPlugin('vmpayment', 'coingate');
-     $pluginParams = new JRegistry();
-     $pluginParams->loadString($plugin->params);     
 
      $authentication = [
-        'auth_token' => $pluginParams->get('auth_token', 'defaultValue'),
-        'environment' => $pluginParams->get('environment', 'defaultValue'),
+        'auth_token' => $method->auth_token,
+        'environment' => $method->environment,
         'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' . COINGATE_VIRTUEMART_EXTENSION_VERSION
      ];
 
@@ -274,8 +271,8 @@ class plgVmPaymentCoingate extends vmPSPlugin
     $pluginParams->loadString($plugin->params);
 
     $authentication = [
-      'auth_token' => $pluginParams->get('auth_token','defaultValue'),
-      'environment' => $pluginParams->get('environment', 'defaultValue'),
+      'auth_token' => $method->auth_token,
+      'environment' => $method->environment,
       'user_agent' => 'CoinGate - Joomla VirtueMart Extension v' . COINGATE_VIRTUEMART_EXTENSION_VERSION
     ];
 
@@ -283,7 +280,7 @@ class plgVmPaymentCoingate extends vmPSPlugin
       'order_id'         => $orderID,
       'price_amount'     => $totalInCurrency,
       'price_currency'   => $currency_code_3,
-      'receive_currency' => $pluginParams->get('receive_currency','defaultValue'),
+      'receive_currency' => $method->receive_currency,
       'cancel_url'       => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=cart')),
       'callback_url'     => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=pluginresponse&task=pluginnotification&tmpl=component')),
       'success_url'      => (JROUTE::_(JURI::root() . 'index.php?option=com_virtuemart&view=pluginresponse&task=pluginresponsereceived&pm=' . $paymentMethodID)),
