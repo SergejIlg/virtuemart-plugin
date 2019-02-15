@@ -39,6 +39,7 @@
       <option value="btc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_BTC_LABEL</option>
       <option value="ltc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_LTC_LABEL</option>
       <option value="eth">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_ETH_LABEL</option>
+      <option value="usdt">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USDT_LABEL</option>	
       <option value="eur">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_EUR_LABEL</option>
       <option value="usd">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USD_LABEL</option>
       <option value="DO_NOT_CONVERT">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_DONOTCONVERT_LABEL</option>
@@ -70,6 +71,7 @@
             <option value="btc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_BTC_LABEL</option>
             <option value="ltc">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_LTC_LABEL</option>
             <option value="eth">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_ETH_LABEL</option>
+	    <option value="usdt">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USDT_LABEL</option>
             <option value="eur">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_EUR_LABEL</option>
             <option value="usd">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_USD_LABEL</option>
             <option value="DO_NOT_CONVERT">VMPAYMENT_COINGATE_RECEIVE_CURRENCY_DONOTCONVERT_LABEL</option>
