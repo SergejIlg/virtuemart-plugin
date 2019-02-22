@@ -14,7 +14,7 @@ Please note, that for "Test" mode you **must** generate separate API credentials
 
 ### via Extension Manager
 
-1. Download [coingate-virtuemart-1.0.2.zip](https://github.com/coingate/virtuemart-plugin/releases/download/v1.0.2/coingate-virtuemart-1.0.2.zip)
+1. Download [coingate-virtuemart-1.0.3.zip](https://github.com/coingate/virtuemart-plugin/releases/download/v1.0.3/coingate-virtuemart-1.0.3.zip)
 
 2. Login to your VirtueMart store admin panel, go to *Extensions » Manage » Install*. In the *Upload Package File* part, choose **coingate-virtuemart.zip** you previously downloaded, then click **Upload & Install**.
 

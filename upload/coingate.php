@@ -1,7 +1,7 @@
 <?php
 
 defined('_JEXEC') or die('Restricted access');
-define('COINGATE_VIRTUEMART_EXTENSION_VERSION', '1.0.2');
+define('COINGATE_VIRTUEMART_EXTENSION_VERSION', '1.0.3');
 
 require_once('lib/CoinGate/init.php');
 
